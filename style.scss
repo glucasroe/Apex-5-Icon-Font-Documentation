@@ -1,0 +1,49 @@
+@function dec-to-hex($d) {
+    $hexVals: "A" "B" "C" "D" "E" "F";
+    $base: 16;
+    $quotient: $d;
+    $result: "";
+    @if $d == 0 {
+        $result: "00";
+    }
+    @while $quotient != 0 {
+        $mod: $quotient % $base;
+        $quotient: floor($quotient / $base);
+        @if $mod > 9 {
+            $mod: nth($hexVals, $mod - 9);
+        }
+        @if $d < $base {
+            $result: "0" + $mod;
+        } @else {
+            $result: $mod + $result;
+        }
+    }
+    $result: to-lower-case($result);
+    @return $result;
+}
+
+@function entity-conversion($value){
+	$result-with-slash: "\"\\#{$value}\"";
+    $escaped-values: unquote($result-with-slash);
+    @return $escaped-values;
+}
+
+@font-face{
+  font-family: apex-5-icon-font;
+  src: url(../apex-5-icon-font.ttf)
+}
+
+div{
+	font-family: apex-5-icon-font;	
+}
+
+$count: 57344; //Hex Starting number
+@while $count < 57686{ //starting number + iterations
+	$hex-count: dec-to-hex($count);
+	$entity: entity-conversion($hex-count);
+
+	.#{$hex-count}:after{
+		content: $entity;
+	}
+	$count: $count + 1;
+}
