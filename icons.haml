@@ -4,8 +4,8 @@
   %meta{:charset => "utf-8"}
   %link(rel="stylesheet" type="text/css" href="css/style.css")
 %body
-  #icon-wrapper
-    -(0...342).each do |i|
-      - a = i + 57344
-      - a = a.to_s(16)
-      %div.icon{:class => a}
+  -(0...342).each do |i|
+    - a = i + 57344
+    - a = a.to_s(16)
+    %div.icon{:class => a}
+      <span class="unicode-entity">#{a}</span>

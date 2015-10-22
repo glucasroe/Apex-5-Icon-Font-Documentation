@@ -1,4 +1,4 @@
-@function dec-to-hex($d) {
+@function dec-to-hex($d) { //http://stackoverflow.com/a/19721069
     $hexVals: "A" "B" "C" "D" "E" "F";
     $base: 16;
     $quotient: $d;
@@ -22,7 +22,7 @@
     @return $result;
 }
 
-@function entity-conversion($value){
+@function entity-conversion($value){ //http://stackoverflow.com/a/26112274
 	$result-with-slash: "\"\\#{$value}\"";
     $escaped-values: unquote($result-with-slash);
     @return $escaped-values;
@@ -33,8 +33,37 @@
   src: url(../apex-5-icon-font.ttf)
 }
 
-div{
-	font-family: apex-5-icon-font;	
+body{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: center;
+	max-width: 60em;
+	margin: 0 auto 0;
+}
+
+.icon{
+	font-family: apex-5-icon-font, sans-serif;
+	font-size: 1em;
+	margin: 1em;
+	width: 4em;
+	font-size: 0.75em;
+	text-align:center;
+	.unicode-entity{
+		font-size: 0.75em;
+		font-weight: 900;
+		text-align: center;
+	}	
+	&:before{
+		font-size: 2rem;
+		display:block;
+		position:relative;
+	}
+	&.unused{
+		color: #cc5555;
+	}
 }
 
 $count: 57344; //Hex Starting number
@@ -42,7 +71,7 @@ $count: 57344; //Hex Starting number
 	$hex-count: dec-to-hex($count);
 	$entity: entity-conversion($hex-count);
 
-	.#{$hex-count}:after{
+	.#{$hex-count}:before{
 		content: $entity;
 	}
 	$count: $count + 1;
