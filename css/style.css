@@ -12,20 +12,24 @@ body {
   margin: 0 auto 0; }
 
 .icon {
-  font-family: apex-5-icon-font, sans-serif;
+  font-family: apex-5-icon-font, Helvetica, Arial, sans-serif;
   font-size: 1em;
   margin: 1em;
-  width: 4em;
+  width: 20%;
   font-size: 0.75em;
-  text-align: center; }
+  text-align: left; }
   .icon .unicode-entity {
     font-size: 0.75em;
     font-weight: 900;
-    text-align: center; }
-  .icon:before {
-    font-size: 2rem;
     display: block;
-    position: relative; }
+    text-align: left;
+    margin-left: 2rem; }
+  .icon:before {
+    font-size: 1.25rem;
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin: 0.25em 0.5em 0.5em 0; }
   .icon.unused {
     color: #cc5555; }
 
