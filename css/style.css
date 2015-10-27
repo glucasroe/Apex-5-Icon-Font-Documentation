@@ -1,15 +1,28 @@
 @font-face {
   font-family: apex-5-icon-font;
-  src: url(../apex-5-icon-font.ttf); }
+  src: url(../_source-files/apex-5-icon-font.ttf); }
 body {
+  max-width: 60em;
+  margin: 0 auto 0;
+  font-family: Helvetica,Arial, sans-serif; }
+
+h1, h2 {
+  color: #666; }
+
+.description {
+  margin-bottom: 2em; }
+  .description h2 {
+    margin: 1em 0 0; }
+  .description p {
+    margin-top: 0.5em; }
+
+.icons-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  align-content: center;
-  max-width: 60em;
-  margin: 0 auto 0; }
+  align-content: center; }
 
 .icon {
   font-family: apex-5-icon-font, Helvetica, Arial, sans-serif;

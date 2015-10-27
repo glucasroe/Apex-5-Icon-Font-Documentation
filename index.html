@@ -4,6 +4,28 @@
   <link href='css/style.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<div class="description">
+  <h1 id="apex5iconfontdocumentation">Apex 5 Icon Font Documentation</h1>
+
+  <h2 id="whatthisis:">What this is:</h2>
+  <p><strong>READ THESE SCARY BOLD LETTERS: THIS IS NOT AN ORACLE SANCTIONED PROJECT. I HAVE NO AFFILIATION WITH ORACLE OR APEX.</strong>
+  As I began working with APEX 5, I liked their icon font and wanted to use it. Sadly, they seem to have no documentation for it at all. This is an attempt to construct some documentation for it.</p>
+
+  <h2 id="cssclasses">CSS Classes</h2>
+  <p>Almost all icons are required to have <code>.a-icon</code> tagged on to the same element, i.e. <code>class=&quot;a-Icon icon-tree-folder&quot;</code>. If there is extra css given, then you <em>must use the inheritance</em> in order to have the icon show up.</p>
+
+  <h2 id="one053">On \E053</h2>
+  <p>This glyph has 5 icons shoved into it that clip outside of the glyph definition. It breaks stuff everywhere and is generally terrible. I don&#8217;t plan on editing it to make it usable.</p>
+
+  <h2 id="thinversions:">Thin Versions:</h2>
+  <p>It seems like the icons all have thick and thin versions, but I can&#8217;t figure out how they specify the thin versions of things. If you find anything, feel free to <a href="https://twitter.com/glucasroe">tweet to me</a> or make a pull request.</p>
+
+  <h2 id="whatyoucoulddotohelp:">What you could do to help:</h2>
+  <p>Typos, styling, anything I missed, or a search system</p>
+</div>
+<hr>
+<h1>The Icons</h1>
+<div class="icons-wrapper">
   <div class='e000 icon unused'>
     <p>Down Triangle</p>
     <span class="unicode-entity">\e000</span>
@@ -643,7 +665,7 @@
     <span class="unicode-entity">\e09c</span>
   </div>
   <div class='e09d icon'>
-    <p>icon-page-form-sql/p>
+    <p>icon-page-form-sql</p>
     <span class="unicode-entity">\e09d</span>
   </div>
   <div class='e09e icon'>
@@ -1382,9 +1404,6 @@
     <p>Return/Undo</p>
     <span class="unicode-entity">\e155</span>
   </div>
-  <!--<style>
-    .e053:before{
-      content: 'Broken';
-    }
-  </style>-->
+</div>
+
 </body>
