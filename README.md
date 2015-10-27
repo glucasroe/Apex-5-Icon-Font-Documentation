@@ -2,10 +2,10 @@
 
 ## What this is:
 **READ THESE SCARY BOLD LETTERS: THIS IS NOT AN ORACLE SANCTIONED PROJECT. I HAVE NO AFFILIATION WITH ORACLE OR APEX.**
-As I began working with APEX 5, I liked their icon font and wanted to suse it. Sadly, they seem to have no documentation for it at all. This is an attempt to construct some documentation for it.
+As I began working with APEX 5, I liked their icon font and wanted to use it. Sadly, they seem to have no documentation for it at all. This is an attempt to construct some documentation for it.
 
 ##CSS Classes
-Almost all icons are required to have `.a-icon` tagged on to the same element, i.e. `class="a-Icon icon-tree-folder"`
+Almost all icons are required to have `.a-icon` tagged on to the same element, i.e. `class="a-Icon icon-tree-folder"`. If there is extra css given, then you *must use the inheritance* in order to have the icon show up.
 
 
 ## On \E053
