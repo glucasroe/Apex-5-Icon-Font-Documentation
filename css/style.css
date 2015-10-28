@@ -1,6 +1,6 @@
 @font-face {
   font-family: apex-5-icon-font;
-  src: url(../apex-5-icon-font.ttf); }
+  src: url(../source/apex-5-icon-font.ttf); }
 body {
   max-width: 60em;
   margin: 0 auto 0;
@@ -20,9 +20,38 @@ h1, h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
-  align-content: center; }
+  align-content: center;
+  list-style-type: none; }
+
+.search-wrapper {
+  position: relative; }
+
+.search {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: #999 solid 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+  .search:focus {
+    border: 1px solid #333;
+    box-shadow: 0;
+    outline: none; }
+
+.search-icon.icon {
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em; }
+
+.search-icon:after {
+  content: '\e022';
+  display: inline-block;
+  width: 1em;
+  height: 1em; }
 
 .icon {
   font-family: apex-5-icon-font, Helvetica, Arial, sans-serif;
@@ -50,6 +79,9 @@ h1, h2 {
     margin: 0; }
   .icon.unused {
     color: #cc5555; }
+
+.tags {
+  display: none; }
 
 .e000:before {
   content: "\e000"; }
