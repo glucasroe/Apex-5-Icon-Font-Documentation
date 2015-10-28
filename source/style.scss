@@ -30,7 +30,7 @@
 
 @font-face{
   font-family: apex-5-icon-font;
-  src: url(../source/apex-5-icon-font.ttf)
+  src: url(../apex-5-icon-font.ttf)
 }
 body{
 	max-width: 60em;
@@ -57,40 +57,9 @@ h1,h2{
 	display:flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: left;
+	justify-content: center;
 	align-items: flex-start;
 	align-content: center;
-	list-style-type:none;
-}
-
-.search-wrapper{
-	position:relative;
-}
-.search{
-	box-sizing: border-box;
-	width: 100%;
-	padding: 10px 15px;
-	border-radius: 3px;
-	border: #999 solid 1px;
-	-webkit-appearance: none; 
-    -moz-appearance: none; 
-    &:focus{
-    	border: 1px solid #333;
-    	box-shadow: 0;
-    	outline: none;
-    }
-}
-.search-icon.icon{
-	position:absolute;
-	right: 0;
-	width: 1em;
-	height: 1em;
-}
-.search-icon:after{
-	content: '\e022';
-	display: inline-block;	
-	width: 1em;
-	height: 1em;
 }
 
 .icon{
@@ -125,9 +94,7 @@ h1,h2{
 		color: #cc5555;
 	}
 }
-.tags{
-	display:none;
-}
+
 $count: 57344; //Hex Starting number
 @while $count < 57686{ //starting number + iterations
 	$hex-count: dec-to-hex($count);
